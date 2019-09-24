@@ -2,10 +2,14 @@
   "name": "stripe-payment-gateway",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4242",
+  "main": "server/index.js",
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.2"
+    "react-scripts": "3.1.2",
+    "react-stripe-elements": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
