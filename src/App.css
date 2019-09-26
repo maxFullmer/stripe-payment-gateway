@@ -1,22 +1,40 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+header {
+  align-self: center; 
+}
+
+#search-n-buy {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: orange;
+  height: 100vh;
+}
+
+#category-shop {
+  width: 70%;
+}
+
+#category-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.categories {
+  width: 200px;
+  background: red;
+}
+
+#quick-buy{
+  width: 30%;
+  position: relative;
+  top: 0;
 }
