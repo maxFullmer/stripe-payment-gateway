@@ -1,3 +1,9 @@
+header {
+  background: green;
+  color: #fff;
+  text-align: center;
+}
+
 main {
   width: 100%;
   display: flex;
@@ -9,32 +15,38 @@ header {
   align-self: center; 
 }
 
-#search-n-buy {
+/* #search-n-buy {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding-left: 10px;
   padding-right: 10px;
   background: orange;
-  height: 100vh;
-}
+} */
 
-#category-shop {
+#item-shop {
   width: 70%;
 }
 
-#category-wrapper {
+#item-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.categories {
+.items {
   width: 200px;
   background: red;
 }
 
 #quick-buy{
-  width: 30%;
   position: relative;
   top: 0;
+}
+
+.header-align {
+  text-align: center;
+}
+
+aside {
+  padding: 10px;
 }

@@ -1,41 +1,39 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import { Elements, StripeProvider } from 'react-stripe-elements';
-import CheckoutForm from './Components/CheckoutForm';
+import Catalog from './Components/Catalog/Catalog.js'
+import SelectedProduct from './Components/Checkout/SelectedProduct.js'
+import CheckoutForm from './Components/Checkout/CheckoutForm.js';
 import './App.css';
 
-class App extends Component {
-  render() {
+function App() {
     return (
       <main>
-        <header>
-          <h1>Stay Awake</h1>
-        </header>
+        <Switch>
+          <Route exact path="/" component={Catalog} />
+          <Route path="/checkout" render={() => 
+            <section>
+              <header>
+                <h1>Seed Commerce</h1>
+              </header>
+              
+              <SelectedProduct />
 
-        <div id="search-n-buy">
-          <section id="category-shop">
-            <h2>Shop Max</h2>
-            <div id="category-wrapper">
-              <article className="categories">Category 1</article>
-              <article className="categories">Category 2</article>
-              <article className="categories">Category 3</article>
-              <article className="categories">Category 4</article>
-            </div>
-          </section>
-
-          <aside id="quick-buy">
-            <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
-              <div className="example">
-                <h2>QuickBuy</h2>
-                <Elements>
-                  <CheckoutForm />
-                </Elements>
-              </div>
-            </StripeProvider>
-          </aside>
-        </div>
+              <aside id="quick-buy">
+                <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
+                  <div className="example">
+                    <h4 className="header-align">Simple and Secure Payment <br /> with Stripe</h4>
+                    <Elements>
+                      <CheckoutForm />
+                    </Elements>
+                  </div>
+                </StripeProvider>
+              </aside>
+            </section>
+        } />
+        </Switch> 
       </main>
     );
-  }
 }
 
 export default App;
