@@ -1,4 +1,5 @@
 header {
+  /* width: 100%; */
   background: green;
   color: #fff;
   text-align: center;
@@ -11,10 +12,6 @@ main {
   align-items: center;
 }
 
-header {
-  align-self: center; 
-}
-
 /* #search-n-buy {
   display: flex;
   flex-direction: column;
@@ -24,18 +21,29 @@ header {
 } */
 
 #item-shop {
-  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#catalog-header {
+  width: 100%;
 }
 
 #item-wrapper {
   display: flex;
+  width: 70%;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  background: orange;
 }
 
 .items {
   width: 200px;
-  background: red;
+  margin: 10px;
+  background: brown;
 }
 
 #quick-buy{
